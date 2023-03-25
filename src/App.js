@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
@@ -5,7 +6,13 @@ import { Login } from './components';
 import  Home  from './containers/Home';
 
 const App = () => {
-  const navigate = useNavigate();
+  const navigate =  useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem("user")) : localStorage.clear();
+
+    if (!user) navigate('/login');
+}, []);
 
   return (
   <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}>
