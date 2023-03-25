@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 

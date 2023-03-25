@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { HiMenu } from 'react-icons/hi';
 import { RiCloseFill } from 'react-icons/ri';
