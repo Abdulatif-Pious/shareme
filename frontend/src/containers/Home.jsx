@@ -22,7 +22,7 @@ const Home = () => {
       .then((data) => {
         setUser(data[0]);
       });
-  }, []);
+  }, [userInfo]);
 
   return (
     <div className='flex flex-col md:flex-row bg-gray-50 h-screen transition-height duration-75 ease-out'>
