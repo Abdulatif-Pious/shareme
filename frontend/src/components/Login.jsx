@@ -23,9 +23,9 @@ const Login = () => {
     window.localStorage.setItem('user', JSON.stringify(user));
 
     client.createIfNotExists(user)
-      .then(() => (
+      .then(() => {
         navigate('/')
-      ))
+      })
   }
   
   return (
