@@ -12,8 +12,8 @@ const Login = () => {
   const user = localStorage.getItem('user') !== 'undefined' && JSON.parse(localStorage.getItem("user"))
 
   if (user) {
-    navigate("/");
-  };
+      useNavigate("/");
+  }
 
   const createOrGetUser = (response) => {
     const decoded = jwt_decode(response.credential);
