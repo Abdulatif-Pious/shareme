@@ -9,6 +9,12 @@ import { client } from '../utils/client';
 const Login = () => {
   const navigate = useNavigate();
 
+  const user = localStorage.getItem('user') !== 'undefined' && JSON.parse(localStorage.getItem("user"))
+
+  if (user) {
+      useNavigate("/");
+  }
+
   const createOrGetUser = (response) => {
     const decoded = jwt_decode(response.credential);
     const { name, sub, picture } = decoded;
