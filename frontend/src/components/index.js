@@ -22,4 +22,4 @@ export {
   Sidebar,
   Spinner,
   UserProfile,
-}
+};
